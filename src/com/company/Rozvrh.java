@@ -4,14 +4,15 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class Rozvrh {
-    private int score = 0;
-    private Hodina hodina;
-    private int pocetHodinVtydnu = 40;
-    private ArrayList<Hodina> rozvrh = new ArrayList<Hodina>();
-    private ArrayList<Ucitel> ucitelePrirazeniKhodinam;
-    private Skola skola;
-    private ArrayList<Ucebna> ucebnyPrirazeneKhodinam;
-    Random rand = new Random();
+
+    public Rozvrh() {
+        skola = new Skola();
+        skola.vytvorDefaultneNastaveneObjekty();
+        score = 0;
+        pocetHodinVtydnu = 40;
+        rozvrh = new ArrayList<Hodina>();
+        rand = new Random();
+    }
 
     public int getScore() {
         return score;
@@ -63,6 +64,14 @@ public class Rozvrh {
 
 
 
+    private int score = 0;
+    private Hodina hodina;
+    private int pocetHodinVtydnu = 40;
+    private ArrayList<Hodina> rozvrh = new ArrayList<Hodina>();
+    private ArrayList<Ucitel> ucitelePrirazeniKhodinam;
+    private Skola skola;
+    private ArrayList<Ucebna> ucebnyPrirazeneKhodinam;
+    Random rand = new Random();
 
 
 
